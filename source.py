@@ -48,7 +48,7 @@ async def dsid(ctx):
 @shutdown.error
 async def shutdown_error(ctx, error):
     if isinstance(error, commands.NotOwner):
-        ctx.send(error)
+        await ctx.send(error)
 
 print("Initializing...")
 bot.load_extension("music")
